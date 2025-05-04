@@ -19,3 +19,29 @@
 # How many sides? 20
 # Here are the results: [18, 19, 6, 8, 13, 6, 6, 6, 18, 12, 20, 10, 14, 8, 14, 17, 12, 15, 20, 17]
 
+import random
+
+random.seed
+
+roll = []
+sides = []
+results = []
+
+def RollDice(roll, sides):
+    for i in range(roll):
+        results.append(random.randint(1, sides))    
+    return results
+
+roll = int(input("How many dice will you roll? "))
+if roll < 1:
+    print("Number of dice must be 1 or higher")
+    int(input("How many dice will you roll? "))
+7
+sides = int(input("How many sides does each die have? "))
+if sides < 2:
+    print("Number of sides must be 2 or higher")
+    int(input("How many sides does each die have? "))
+
+RollDice(roll, sides)
+
+print("The results are: ",results)
